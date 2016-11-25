@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: groovy-web-demo
+  groovy:
+    template:
+      cache: false
