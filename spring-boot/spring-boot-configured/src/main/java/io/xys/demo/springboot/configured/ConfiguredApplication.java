@@ -1,9 +1,11 @@
 package io.xys.demo.springboot.configured;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableLoadTimeWeaving;
 import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
+import org.springframework.core.env.Environment;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
@@ -24,6 +26,9 @@ import io.xys.demo.springboot.configured.pojo.Account;
 @EnableLoadTimeWeaving
 public class ConfiguredApplication {
 
+    @Autowired
+    private Environment environment;
+
     public static void main(String[] args) {
         SpringApplication.run(ConfiguredApplication.class, args);
     }
@@ -32,6 +37,8 @@ public class ConfiguredApplication {
     public void sayHello(){
         Account account = new Account();
         System.out.println(account.toString());
+        System.out.println(environment.getProperty("user.home"));
+        System.out.println(environment.getProperty("user.dir"));
     }
 
 }
