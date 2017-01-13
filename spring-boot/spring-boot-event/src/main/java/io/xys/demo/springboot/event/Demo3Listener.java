@@ -13,19 +13,24 @@ import org.springframework.stereotype.Component;
  * @since 2016年11月28日 15:36
  */
 @Component
-public class Demo3Listener implements ApplicationListener<DemoEvent>, Ordered{
+public class Demo3Listener implements ApplicationListener<DemoEvent>, Ordered {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Demo3Listener.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Demo3Listener.class);
 
-//    @Async
-    public void onApplicationEvent(DemoEvent demoEvent) {
+  /**
+   * Demo Event scribe method.
+   *
+   * @param demoEvent demo event
+   */
+  //    @Async
+  public void onApplicationEvent(DemoEvent demoEvent) {
 
-        String msg = demoEvent.getMsg();
+    String msg = demoEvent.getMsg();
 
-        LOGGER.info("Demo3Listener接收到消息：{}", msg);
-    }
+    LOGGER.info("Demo3Listener接收到消息：{}", msg);
+  }
 
-    public int getOrder() {
-        return 1;
-    }
+  public int getOrder() {
+    return 1;
+  }
 }

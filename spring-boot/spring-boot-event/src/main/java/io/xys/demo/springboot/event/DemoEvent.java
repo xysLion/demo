@@ -10,14 +10,14 @@ import org.springframework.context.ApplicationEvent;
  */
 public class DemoEvent extends ApplicationEvent {
 
-    private final String msg;
+  private final String msg;
 
-    public DemoEvent(Object source, String msg) {
-        super(source);
-        this.msg = msg;
-    }
+  public DemoEvent(Object source, String msg) {
+    super(source);
+    this.msg = msg;
+  }
 
-    public String getMsg() {
-        return msg;
-    }
+  public String getMsg() {
+    return msg;
+  }
 }

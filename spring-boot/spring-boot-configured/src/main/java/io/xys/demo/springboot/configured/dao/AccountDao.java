@@ -11,8 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class AccountDao {
 
-    public String sayHello(String threadName){
-        return "Hello " + threadName;
-    }
-
+  public String sayHello(String threadName) {
+    return "Hello " + threadName;
+  }
 }

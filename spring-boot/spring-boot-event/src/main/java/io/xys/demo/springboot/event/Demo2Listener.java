@@ -14,15 +14,20 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Order(2)
-public class Demo2Listener implements ApplicationListener<DemoEvent>{
+public class Demo2Listener implements ApplicationListener<DemoEvent> {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(Demo2Listener.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Demo2Listener.class);
 
-//    @Async
-    public void onApplicationEvent(DemoEvent demoEvent) {
+  /**
+   * Demo Event scribe method.
+   *
+   * @param demoEvent demo event
+   */
+  //    @Async
+  public void onApplicationEvent(DemoEvent demoEvent) {
 
-        String msg = demoEvent.getMsg();
+    String msg = demoEvent.getMsg();
 
-        LOGGER.info("Demo2Listener接收到消息：{}", msg);
-    }
+    LOGGER.info("Demo2Listener接收到消息：{}", msg);
+  }
 }

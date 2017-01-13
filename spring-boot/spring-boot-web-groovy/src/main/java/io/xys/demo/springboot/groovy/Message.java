@@ -1,8 +1,8 @@
 package io.xys.demo.springboot.groovy;
 
+import java.util.Date;
 import org.hibernate.validator.constraints.NotEmpty;
 
-import java.util.Date;
 
 /**
  * 消息
@@ -12,46 +12,45 @@ import java.util.Date;
  */
 public class Message {
 
-    private Long id;
+  private Long id;
 
-    @NotEmpty(message = "Message is required.")
-    private String text;
+  @NotEmpty(message = "Message is required.")
+  private String text;
 
-    @NotEmpty(message = "Summary is required.")
-    private String summary;
+  @NotEmpty(message = "Summary is required.")
+  private String summary;
 
-    private Date created = new Date();
+  private Date created = new Date();
 
-    public Long getId() {
-        return this.id;
-    }
+  public Long getId() {
+    return this.id;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public Date getCreated() {
-        return this.created;
-    }
+  public Date getCreated() {
+    return this.created;
+  }
 
-    public void setCreated(Date created) {
-        this.created = created;
-    }
+  public void setCreated(Date created) {
+    this.created = created;
+  }
 
-    public String getText() {
-        return this.text;
-    }
+  public String getText() {
+    return this.text;
+  }
 
-    public void setText(String text) {
-        this.text = text;
-    }
+  public void setText(String text) {
+    this.text = text;
+  }
 
-    public String getSummary() {
-        return this.summary;
-    }
+  public String getSummary() {
+    return this.summary;
+  }
 
-    public void setSummary(String summary) {
-        this.summary = summary;
-    }
-
+  public void setSummary(String summary) {
+    this.summary = summary;
+  }
 }

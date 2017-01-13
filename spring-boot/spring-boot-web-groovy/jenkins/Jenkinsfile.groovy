@@ -1,6 +1,6 @@
-node(label: 'jenkins-slave'){
+node(label: 'jenkins-slave') {
 
-    stage(name: 'Hello World'){
+    stage(name: 'Hello World') {
         echo 'Hello World'
     }
 

@@ -15,10 +15,14 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @EnableAsync
 public class EventApplication {
 
-    public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(EventApplication.class, args);
+  /**
+   * start up event application.
+   *
+   * @param args  params
+   */
+  public static void main(String[] args) {
+    ApplicationContext context = SpringApplication.run(EventApplication.class, args);
 
-        context.publishEvent(new DemoEvent(new EventApplication(), "this is a application event"));
-    }
-
+    context.publishEvent(new DemoEvent(new EventApplication(), "this is a application event"));
+  }
 }

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: axon-cqrs
+  datasource:
+    sql-script-encoding: UTF-8
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    database: HSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  freemarker:
+    cache: false
+
+server:
+  port: 8080

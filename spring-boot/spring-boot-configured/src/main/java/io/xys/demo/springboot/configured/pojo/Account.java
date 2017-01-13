@@ -1,10 +1,9 @@
 package io.xys.demo.springboot.configured.pojo;
 
+import io.xys.demo.springboot.configured.dao.AccountDao;
 import org.springframework.beans.factory.annotation.Autowire;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Configurable;
-
-import io.xys.demo.springboot.configured.dao.AccountDao;
 
 /**
  * 普通pojo类
@@ -15,22 +14,21 @@ import io.xys.demo.springboot.configured.dao.AccountDao;
 @Configurable(autowire = Autowire.BY_TYPE)
 public class Account {
 
-    public static int index = 0;
+  public static int index = 0;
 
-    public Account() {
-        index = index + 1;
-    }
+  public Account() {
+    index = index + 1;
+  }
 
-    private AccountDao accountDao;
+  private AccountDao accountDao;
 
-    @Autowired
-    public void setAccountDao(AccountDao accountDao) {
-        this.accountDao = accountDao;
-    }
+  @Autowired
+  public void setAccountDao(AccountDao accountDao) {
+    this.accountDao = accountDao;
+  }
 
-    @Override
-    public String toString(){
-        return accountDao.sayHello("" + index);
-    }
-
+  @Override
+  public String toString() {
+    return accountDao.sayHello("" + index);
+  }
 }

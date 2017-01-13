@@ -203,6 +203,10 @@
         value="^@return the *|^This method returns |^A [{]@code [a-zA-Z0-9]+[}]( is a )"/>
     </module>
     <module name="JavadocParagraph"/>
+    <module name="JavadocStyle">
+      <property name="scope" value="public"/>
+      <property name="checkFirstSentence" value="false"/>
+    </module>
     <module name="AtclauseOrder">
       <property name="tagOrder" value="@param, @return, @throws, @deprecated"/>
       <property name="target"
@@ -229,9 +233,5 @@
       <property name="exceptionVariableName" value="expected"/>
     </module>
     <module name="CommentsIndentation"/>
-    <module name="JavadocStyle">
-      <property name="scope" value="public"/>
-      <property name="checkFirstSentence" value="false"/>
-    </module>
   </module>
 </module>
